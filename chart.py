@@ -48,8 +48,9 @@ plt.yticks(fontsize=14)
 
 # --- 5. Export Chart ---
 # Save the chart as a PNG file with the exact required dimensions.
+# Do NOT use bbox_inches='tight' or layout adjustments, as they can change pixel size.
 # figsize=(8, 8) and dpi=64 results in 8*64 x 8*64 = 512x512 pixels.
-plt.savefig('chart.png', dpi=64, bbox_inches='tight')
+plt.savefig('chart.png', dpi=64)
 
 print("Successfully generated and saved chart.png (512x512 pixels).")
 
